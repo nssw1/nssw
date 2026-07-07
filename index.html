@@ -69,6 +69,46 @@ nav{
 }
 .nav-cta:hover{opacity:.85;}
 
+
+.nav-logo{display:flex;align-items:center;gap:.65rem;}
+.nav-logo img{
+  width:34px;height:34px;object-fit:contain;border-radius:50%;
+  filter:drop-shadow(0 0 8px rgba(232,180,75,.45));
+}
+.hero-brand{
+  position:relative;
+  z-index:1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:2rem;
+  flex-wrap:wrap;
+  animation:fadeUp .8s .35s both;
+}
+.hero-brand-logo{
+  width:min(220px,34vw);
+  height:auto;
+  border-radius:50%;
+  filter:drop-shadow(0 0 28px rgba(232,180,75,.55));
+  flex-shrink:0;
+}
+.hero-brand .hero-title{
+  text-align:left;
+  animation:none;
+}
+@media(max-width:768px){
+  .hero-brand{
+    flex-direction:column;
+    gap:1.2rem;
+  }
+  .hero-brand .hero-title{
+    text-align:center;
+  }
+  .hero-brand-logo{
+    width:180px;
+  }
+}
+
 /* ─── HERO ─── */
 #hero{
   position:relative;z-index:1;
@@ -411,7 +451,7 @@ footer span{color:var(--gold);}
 
 <!-- NAV -->
 <nav>
-  <div class="nav-logo">NSSW'1</div>
+  <div class="nav-logo"><img src="Logo.PNG" alt="NSSW'1 logo"/><span>NSSW'1</span></div>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#topics">Topics</a></li>
@@ -428,11 +468,14 @@ footer span{color:var(--gold);}
 <section id="hero">
   <div class="hero-nebula"></div>
   <div class="hero-badge">USTHB · Algiers · 2026</div>
-  <h1 class="hero-title">
-    First National<br/>
-    <span class="space">Space </span><span class="science">Science</span><br/>
-    Workshop
-  </h1>
+  <div class="hero-brand">
+    <img src="Logo.PNG" alt="NSSW'1 logo" class="hero-brand-logo"/>
+    <h1 class="hero-title">
+      First National<br/>
+      <span class="space">Space </span><span class="science">Science</span><br/>
+      Workshop
+    </h1>
+  </div>
   <p class="hero-sub">
     <strong>NSSW'1</strong> — Faculty of Physics · Laboratory of Theoretical Physics and Didactics
   </p>
